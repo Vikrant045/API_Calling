@@ -41,9 +41,9 @@ app.get("/api/products",(req,res)=>{
       ];
       if(req.query.search){
 
-        const filter_Products = products.filter((product)=>(
-            product.name.includes(req.query.search)
-        ))
+        const filter_Products = products.filter((product)=>
+           ( product.name.includes(req.query.search))
+        )
         res.send(filter_Products)
         return
           }
